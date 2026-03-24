@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header start-->
+      <header>
+        <nav>
+          <ul class="primary-menu">
+            <li>
+              <div>Logo Here</div>
+            </li>
+            <li>
+              <a class="nav-button" href="index.html"><span>Home</span></a>
+            </li>
+            <li>
+              <a class="nav-button" href="./contact.html"><span>Contact</span></a>
+            </li>
+            <li>
+              <a class="nav-button" href="./blog.html"><span>Blog</span></a>
+            </li>
+            <li>
+              <a class="nav-button" href="./about.html"><span>About</span></a>
+            </li>
+            <li>
+              <a class="nav-button" href="./team.html"><span>Meet the Team</span></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- main content start -->
+      <main class="content">
+        <button class="show-dialog">Show the dialog</button>
+        <dialog class="dialog-one">
+          <button>Close</button>
+
+          <p>Some info here etc..:</p>
+
+          <div>
+            <img src="https://placehold.co/300x160/333/ff0000/" alt="nice" />
+          </div>
+
+          <form class="dialog-form" action="https://reqres.in/api/users" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" required placeholder="full name:" />
+            <hr />
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="user_email" required placeholder="email:" />
+            <hr />
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="user_message" placeholder="optional message:"></textarea>
+            <hr />
+
+            <button type="submit">Submit</button>
+          </form>
+        </dialog>
+
+        <script>
+          function openTheDialog(event) {
+            let dialogElement = document.querySelector('.dialog-one');
+
+            dialogElement.showModal();
+          }
+
+          function closeTheDialog(event) {
+            let dialogElement = document.querySelector('.dialog-one');
+
+            dialogElement.close();
+          }
+
+          let openButton = document.querySelector('.show-dialog');
+
+          if (openButton) {
+            openButton.addEventListener('click', openTheDialog);
+          }
+
+          let closeButton = document.querySelector('.dialog-one > button');
+          if (closeButton) {
+            closeButton.addEventListener('click', closeTheDialog);
+          }
+        </script>
+
+        <script>
+          let outputData = false;
+          let formElement = document.querySelector('.dialog-form');
+          if (formElement && outputData) {
+            formElement.addEventListener('submit', (e) => {
+              // on form submission, prevent default
+              e.preventDefault();
+              let currentForm = e.target;
+              // // construct a FormData object from current form,
+              const formData = new FormData(currentForm);
+              for (var pair of formData.entries()) {
+                console.log(pair[0], pair[1]);
+              }
+            });
+          }
+        </script>
+        <style>
+          iframe {
+            aspect-ratio: 16 / 9;
+            width: 100% !important;
+          }
+        </style>
+        <div class="yt">
+          <iframe
+            src="https://www.youtube.com/embed/kiUGf_Z08RQ"
+            title="C++ POINTERS FULL COURSE Beginner to Advanced (Learn C++ Pointers in 2,5 hours)"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </main>
+
+      <!-- footer start -->
+      <footer>
+        <div>
+          <p>your footer details here.</p>
+        </div>
+        <div>
+          <p class="copyright">&copy; 2025</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

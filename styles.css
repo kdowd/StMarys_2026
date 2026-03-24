@@ -1,6 +1,17 @@
+:root {
+  --fw-accordion-body-font-size: 1.1rem;
+  --fw-accordion-body-line-height: 1.5rem;
+  --fw-font-family: 'Noto Sans Mono', monospace;
+  --fw-accordion-title-font-size: 1.6rem;
+  --fw-accordion-body-font-size: 1.1rem;
+  --fw-accordion-body-line-height: 1.5;
+  --fw-accordion-body-background-color: #ececec;
+}
+
 body {
-  background-color: azure;
-  font-family: monospace !important;
+  background-color: rgb(78, 123, 192);
+  font-size: 2rem !important;
+  /* font-family: monospace !important; */
   padding-bottom: 8%;
 }
 
@@ -20,5 +31,5 @@ ol {
 }
 
 a {
-  font-size: 1.1rem;
+  font-size: var(--fw-accordion-body-font-size);
 }

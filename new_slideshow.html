@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <title>SlideShow</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header start-->
+      <header>
+        <nav>
+          <ul class="primary-menu">
+            <li>
+              <div>Logo Here</div>
+            </li>
+            <li>
+              <a class="nav-button" href="index.html"><span>Home</span></a>
+            </li>
+            <li>
+              <a class="nav-button" href="./contact.html"><span>Contact</span></a>
+            </li>
+            <li>
+              <a class="nav-button" href="./blog.html"><span>Blog</span></a>
+            </li>
+            <li>
+              <a class="nav-button" href="./about.html"><span>About</span></a>
+            </li>
+            <li>
+              <a class="nav-button" href="./team.html"><span>Meet the Team</span></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- main content start -->
+      <main class="content">
+        <div class="main-carousel">
+          <img src="https://placehold.co/800x600" alt="" />
+          <img src="https://placehold.co/1200x800" alt="" />
+          <img src="https://placehold.co/800x600" alt="" />
+          <img src="https://placehold.co/800x600" alt="" />
+          <img src="https://placehold.co/800x600" alt="" />
+        </div>
+        <div class="slideshow-text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor reprehenderit dolorem nulla esse laborum
+            delectus. Dolor dolores neque, corporis quas accusantium minus tenetur facilis veniam sequi illum vero
+            doloribus eaque.
+          </p>
+        </div>
+
+        <script>
+          var elem = document.querySelector('.main-carousel');
+          var myFlickity = new Flickity(elem, {
+            // options
+            draggable: true,
+            freeScroll: true,
+            contain: true,
+            autoPlay: true,
+            pauseAutoPlayOnHover: true,
+            autoPlay: 4500,
+            fade: true,
+          });
+        </script>
+      </main>
+
+      <!-- footer start -->
+      <footer>
+        <div>
+          <p>your footer details here.</p>
+        </div>
+        <div>
+          <p class="copyright">&copy; 2025</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

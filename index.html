@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
     <script type="module"
         src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
@@ -14,12 +18,12 @@
 </head>
 
 <body>
-    <h1 style="background-color: cadetblue; padding: 1rem; border-radius: 12px">
+    <h1 style="background-color: dodgerblue; padding: 1rem; border-radius: 12px">
         <img width="364" height="68" src="st-marys-logo.png" alt="st marys logo" />
     </h1>
     <div class="page-wrapper">
         <div class="accordion-wrapper">
-            <fw-accordion expanded>
+            <fw-accordion>
                 <fw-accordion-title>
                     <fw-icon name="minus" size="14" slot="expanded-icon"></fw-icon>
                     <fw-icon name="plus" size="14" slot="collapsed-icon"></fw-icon>
@@ -34,19 +38,18 @@
                         simple web page.
                     </p>
                     <p>
-                        We will create some CSS and CSS classes and then save that code to
-                        an external CSS file.
+                        We will create some code to style our webpage. Just so you know some basics...
                     </p>
-                    <p>Finally we will link our basic web page to the external CSS.</p>
+
                     <p>
                         Doing all of the above will help prepare you for the rest of
                         today.
                     </p>
                     <p>
-                        I will be sharing code with you but you'll need to have some idea
+                        I will be sharing code with you so you'll need to have some idea
                         where the code goes and how it relates to the page and page style.
                     </p>
-                    <fw-toggle size="medium"></fw-toggle>
+
                 </fw-accordion-body>
             </fw-accordion>
 
@@ -62,9 +65,8 @@
                 <fw-accordion-body>
                     <ul>
                         <li>
-                            Create Folder on your machine and give it a meaningful name - e.g. myProject<br />
-                            Remember where you made the folder.This folder will be your
-                            project home.
+                            Create a Folder on your machine and give it a meaningful name - e.g. myProject.
+                            Remember where you made the folder.
                         </li>
                         <li>
                             Open VSCode and use "File > Open Folder" and navigate to the
@@ -81,9 +83,9 @@
                             </ol>
                         </li>
                     </ul>
-                    <fw-toggle size="medium"></fw-toggle>
+
                     <br />
-                    <p>File names are always Case-Sensitive.</p>
+                    <p>File and Folder names are always CaSe-SeNsiTive.</p>
                 </fw-accordion-body>
             </fw-accordion>
 
@@ -93,50 +95,57 @@
                     <fw-icon name="plus" size="14" slot="collapsed-icon"></fw-icon>
                     <fw-pill color=blue>
                         <fw-icon name="add-contact" slot="icon"></fw-icon>
-                        Complete index.html:
+                        Updated index.html:
                     </fw-pill>
                 </fw-accordion-title>
                 <fw-accordion-body>
                     <ol>
-                        <li>Type ! as the first character and then press "Tab". The page will auto complete.</li>
+
 
                         <li>
-                            <h4>Paste the following between the &lt;body&gt; tags.</h4>
-                            <xmp>
-                                <div class="container">
-                                    <!-- 1 start-->
-                                    <header>
+                            <h4>Paste the following into index.html</h4>
+<xmp>
+<!doctype html>
+<html lang="en">
 
-                                    </header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <title>Document</title>
+</head>
 
-                                    <!-- 2 start -->
-                                    <main class="content">
-                                        <p>your content</p>
-                                    </main>
+<body>
+    <div class="container">
+        <!-- header start-->
+        <header>
+            your navigation here.
+        </header>
 
-                                    <!-- 3 start -->
-                                    <footer>
-                                        <div>
-                                            <p>My Details:</p>
-                                        </div>
-                                        <div>
-                                            <p class="copyright">&copy; 2025</p>
-                                        </div>
-                                    </footer>
-                                </div>
-                            </xmp>
+        <!-- main content start -->
+        <main class="content">
+            <p>your main content here.</p>
+        </main>
+
+        <!-- footer start -->
+        <footer>
+            <div>
+                <p>your footer details here.</p>
+            </div>
+            <div>
+                <p class="copyright">&copy; 2026</p>
+            </div>
+        </footer>
+    </div>
+    </body>
+
+</html>
+</xmp>
                         </li>
 
-                        <li>
-                            <h4>Inside and at the bottom of the &lt;head&gt; tag add the following:</h4>
-
-                            <xmp>
-                                <link rel="stylesheet" href="shared.css">
-                                <link rel="stylesheet" href="navigation.css">
-                            </xmp>
-                        </li>
                     </ol>
-                    <fw-toggle size="medium"></fw-toggle>
+
                 </fw-accordion-body>
             </fw-accordion>
 
@@ -150,35 +159,35 @@
                     </fw-pill>
                 </fw-accordion-title>
                 <fw-accordion-body>
-                    <h4>Paste the following between the &lt;header&gt; tags - near the top of the &lt;body&gt; tags.
+                    <h4>Paste the following between the &lt;header&gt; tags - near the top of the &lt;body&gt; tag.
                     </h4>
-                    <xmp>
-                        <nav>
-                            <ul class="primary-menu">
-                                <li style="margin-right: auto">
-                                    <div>Logo Here</div>
-                                </li>
-                                <li>
-                                    <a class="nav-button" href="index.html"><span>Home</span></a>
-                                </li>
-                                <li>
-                                    <a class="nav-button" href="#"><span>Contact</span></a>
-                                </li>
-                                <li class="sub-menu-wrapper" style="position: relative" aria-haspopup="true">
-                                    <a class="nav-button" href="#"><span>Blog</span></a>
-                                </li>
-                                <li>
-                                    <a class="nav-button" href="#"><span>About</span></a>
-                                </li>
-                                <li>
-                                    <a class="nav-button" href="#"><span>Meet the Team</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </xmp>
-                    <fw-toggle size="medium"></fw-toggle>
-                </fw-accordion-body>
-            </fw-accordion>
+<xmp>
+<nav>
+    <ul class="primary-menu">
+        <li>
+            <div>Logo Here</div>
+        </li>
+        <li>
+            <a class="nav-button" href="index.html"><span>Home</span></a>
+        </li>
+        <li>
+            <a class="nav-button" href="./contact.html"><span>Contact</span></a>
+        </li>
+        <li>
+            <a class="nav-button" href="./blog.html"><span>Blog</span></a>
+        </li>
+        <li>
+            <a class="nav-button" href="./about.html"><span>About</span></a>
+        </li>
+        <li>
+            <a class="nav-button" href="./team.html"><span>Meet the Team</span></a>
+        </li>
+    </ul>
+</nav>
+</xmp>
+
+</fw-accordion-body>
+</fw-accordion>
 
             <fw-accordion>
                 <fw-accordion-title>
@@ -190,58 +199,146 @@
                     </fw-pill>
                 </fw-accordion-title>
                 <fw-accordion-body>
-                    <h4>Paste the following into shared.css</h4>
-                    <xmp>
-                        body {
-                        margin: 0;
-                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                        font-size: 16px;
-                        color: black;
-                        }
+<h4>Paste the following into shared.css</h4>
+<xmp>
+:root {
+  --site-font-colour: black;
+  --site-background-colour: yellow;
+  --header-background-colour: #1981dd;
+  --footer-background-colour: #134c7d;
+  --footer-text-colour: white;
+}
 
-                        header {
-                        min-height: 50px;
-                        background-color: #037cf5;
-                        }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: var(--site-font-colour);
+}
 
-                        main {
-                        flex: 1 0 auto;
-                        padding: 1rem 2rem;
-                        background-color: azure;
+header {
+  min-height: 50px;
+  background-color: var(--header-background-colour);
+}
 
-                        p {
-                        font-size: large;
-                        line-height: 1.8rem;
-                        }
-                        }
+main {
+  flex: 1 0 auto;
+  padding: 1rem 2rem;
+  background-color: var(--site-background-colour);
 
-                        footer {
-                        box-sizing: border-box;
-                        min-height: 50px;
-                        background-color: #134c7d;
-                        /* position: fixed; */
-                        left: 0;
-                        bottom: 0;
-                        width: 100vw;
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        place-items: end;
-                        padding: 0 1rem;
-                        color: white;
-                        div:first-of-type {
-                        place-self: start;
-                        }
-                        }
+  p {
+    font-size: large;
+    line-height: 1.8rem;
+  }
+}
 
-                        .container {
-                        display: flex;
-                        flex-direction: column;
-                        min-height: 100vh;
-                        }
+footer {
+  box-sizing: border-box;
+  min-height: 80px;
+  background-color: var(--footer-background-colour);
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  place-items: end;
+  padding: 0 1rem;
+  color: var(--footer-text-colour);
+}
 
+footer div:first-of-type {
+  place-self: start;
+}
 
-                    </xmp>
-                    <fw-toggle size="medium"></fw-toggle>
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.a-grid {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 30px;
+}
+
+.a-grid > div > img {
+  object-fit: cover;
+  height: 200px;
+  aspect-ratio: 16 / 9;
+}
+
+.a-grid .grid-header {
+  grid-column: 1 / -1;
+}
+
+/* form styles */
+::backdrop {
+  background-image: linear-gradient(45deg, snow, rebeccapurple, dodgerblue);
+  opacity: 0.75;
+}
+
+.dialog-one {
+  padding: 40px 50px;
+}
+
+.dialog-one form input {
+  padding: 1.5rem;
+}
+
+.dialog-one form button,
+.dialog-one button {
+  padding: 0.5rem 1rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+
+/* slideshow styles */
+.main-carousel {
+  background: #eee;
+  width: 50%;
+  margin: auto;
+}
+
+.main-carousel img {
+  width: 600px;
+  height: 400px;
+  margin-right: 10px;
+  background: rgb(204, 136, 153);
+  object-fit: cover;
+}
+
+.flickity-page-dots .dot {
+  background-color: pink;
+}
+
+.slideshow-text {
+  padding: 3rem;
+  max-width: 80ch;
+  margin: auto;
+}
+
+<!-- youtube video style -->
+iframe {
+    aspect-ratio: 16 / 9;
+    width: 100% !important;
+}
+
+.yt {
+  width: 80%;
+  margin: auto;
+}
+
+</xmp>
+
                 </fw-accordion-body>
             </fw-accordion>
 
@@ -255,53 +352,59 @@
                     </fw-pill>
                 </fw-accordion-title>
                 <fw-accordion-body>
-                    <h4>Paste the following into navigation.css file and save.</h4>
-                    <xmp>
+<h4>Paste the following into navigation.css file and save.</h4>
+<xmp>
 
-                        .nav-button {
-                        font-family: monospace;
-                        font-size: 1.2rem;
-                        display: block;
-                        color: snow;
-                        background-color: rosybrown;
-                        text-decoration: none;
-                        padding: 0.5rem 16px;
-                        cursor: pointer;
-                        }
+:root {
+  --button-background-colour: #ff4000;
+  --button-rollover-colour: #50b2c0;
+  --button-text-colour: snow;
+  --button-rollover-text-colour: black;
+}
 
-                        .nav-button:hover {
-                        background-color: yellow;
-                        color: black;
-                        }
+.nav-button {
+  font-size: 1.2rem;
+  display: block;
+  color: var(--button-text-colour);
+  border: 1px solid var(--button-text-colour);
+  background-color: var(--button-background-colour);
+  text-decoration: none;
+  padding: 0.5rem 16px;
+  cursor: pointer;
+}
 
-                        header {
-                        nav {
-                        ul {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-end;
-                        align-items: center;
-                        gap: 1rem;
-                        list-style-type: none;
+.nav-button:hover {
+  border: 1px solid var(--button-rollover-text-colour);
+  background-color: var(--button-rollover-colour);
+  color: var(--button-rollover-text-colour);
+}
 
-                        li:last-of-type {
-                        padding-right: 1rem;
-                        }
-                        }
-                        }
-                        }
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  list-style-type: none;
+}
 
-                        .primary-menu {
-                        svg {
-                        width: 48px;
-                        height: 48px;
-                        }
-                        }
+header nav ul li:last-of-type {
+  padding-right: 1rem;
+}
+
+.primary-menu svg {
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.primary-menu li:first-of-type {
+  margin-right: auto;
+}
 
 
 
-                    </xmp>
-                    <fw-toggle size="medium"></fw-toggle>
+</xmp>
+
                 </fw-accordion-body>
             </fw-accordion>
 
@@ -317,10 +420,10 @@
                 <fw-accordion-body>
                     <ol>
                         <li>
-                            <p>We need a 5 page site. So far we have one page - Home (index.html)</p>
+                            <p>We need a 5 page site. So far we have just one page -index.html ( home page)</p>
                         </li>
                         <li>
-                            <p>Duplicate index.html four times and rename - for example:
+                            <p>Duplicate index.html four times and rename to suit your project e.g.:
                             <ul>
                                 <li>contact.html</li>
                                 <li>blog.html</li>
@@ -333,27 +436,10 @@
                     </ol>
 
 
-                    <fw-toggle size="medium"></fw-toggle>
-                </fw-accordion-body>
-            </fw-accordion>
-
-            <fw-accordion>
-                <fw-accordion-title>
-                    <fw-icon name="minus" size="14" slot="expanded-icon"></fw-icon>
-                    <fw-icon name="plus" size="14" slot="collapsed-icon"></fw-icon>
-                    <fw-pill color=red>
-                        <fw-icon name="add-note" slot="icon"></fw-icon>
-                        HELP !!!!!
-                    </fw-pill>
-                </fw-accordion-title>
-                <fw-accordion-body>
-                    <h4>All gone wrong?</h4>
-                    <p>Here's a link to a zip file:</p>
-                    <a href="https://bigunit.co.nz/StMarys_2025/site.zip">site.zip</a>
-
 
                 </fw-accordion-body>
             </fw-accordion>
+
 
             <!-- end of main pages code -->
 
@@ -369,13 +455,13 @@
                     </fw-pill>
                 </fw-accordion-title>
                 <fw-accordion-body>
-                    <p>Each site needs customisation. </p>
+                    <p>Your site needs customisation. </p>
                     <p>Take five minutes and choose 4 to 6 colours from the site below,
                         write down the "Hex" colours (eg #fff000) and then add then update your sites css files.
+                        See the ":root { }" part of both css files to update the colours or add additional colours.
                     </p>
-                    <p>Choose colours for text and for the backgrouds and for the menu and menu
-                        rollovers.</p>
-                    <p>Look at the CSS file, where you se color: or background-color you can add your own custom colour.
+ 
+                    <p>You can add your own custom color for any page element.
                     </p>
                     <div>
                         <p><a href=" https://coolors.co/generate">Click For Custom Colour Generator Site</a></p>
@@ -383,7 +469,7 @@
 
                     </div>
 
-                    <fw-toggle size="medium"></fw-toggle>
+
                 </fw-accordion-body>
             </fw-accordion>
 
@@ -399,71 +485,85 @@
                     </fw-pill>
                 </fw-accordion-title>
                 <fw-accordion-body>
-                    <h4>Paste the following between the &lt;main&gt; tags.
+                    <h4>Paste the following between the &lt;main&gt; tags in a page of your choice.
                     </h4>
-                    <xmp>
-                        <style>
-                            .a-grid {
-                                padding-top: 40px;
-
-                                display: grid;
-
-                                grid-template-columns: 1fr 1fr;
-
-                                place-items: center;
-
-                                gap: 30px;
-
-                                img {
-                                    object-fit: cover;
-                                    height: 200px;
-                                    aspect-ratio: 16 / 9;
-                                }
-                            }
-
-                            h1 {
-                                text-align: center;
-                            }
-                        </style>
-                        <h1>My Nice grid of things</h1>
+                <p>Update the image tags to point to your own images that are in your site build folder.</p>
+         
+<xmp>
 
 
-                        <div class="a-grid">
-                            <div>
-                                <img src="https://place-hold.it/320x200/333/ff0000/" alt="image of..." />
-                            </div>
 
-                            <div>
-                                <img src="https://place-hold.it/300x160/333/ff0000/" alt="image of..." />
-                            </div>
-                            <div>
-                                <img src="https://place-hold.it/400x260/333/ff0000/" alt="image of..." />
-                            </div>
-                            <div>
-                                <img src="https://place-hold.it/360x200/333/ff0000/" alt="image of..." />
-                            </div>
+<div class="a-grid">
+    <h1 class="grid-header">My Nice grid of things</h1>
+    <div>
+      <img src="https://placehold.co/320x200/333/ff0000/" alt="image of..." />
+    </div>
 
-                            <div>
-                                <img src="https://place-hold.it/300x160/333/ff0000/" alt="image of..." />
-                            </div>
-                            <div>
-                                <img src="https://place-hold.it/400x260/333/ff0000/" alt="image of..." />
-                            </div>
-                            <div>
-                                <img src="https://place-hold.it/300x200/333/ff0000/" alt="image of..." />
-                            </div>
+    <div>
+      <img src="https://placehold.co/300x160/333/ff0000/" alt="image of..." />
+    </div>
 
-                            <div>
-                                <img src="https://place-hold.it/360x160/333/ff0000/" alt="image of..." />
-                            </div>
-                            <div>
-                                <img src="https://place-hold.it/400x260/333/ff0000/" alt="image of..." />
-                            </div>
-                        </div>
-                    </xmp>
-                    <fw-toggle size="medium"></fw-toggle>
+    <div>
+      <img src="https://placehold.co/400x260/333/ff0000/" alt="image of..." />
+    </div>
+
+    <div>
+      <img src="https://placehold.co/360x200/333/ff0000/" alt="image of..." />
+    </div>
+
+    <div>
+      <img src="https://placehold.co/300x160/333/ff0000/" alt="image of..." />
+    </div>
+
+    <div>
+      <img src="https://placehold.co/400x260/333/ff0000/" alt="image of..." />
+    </div>
+    
+    <div>
+      <img src="https://placehold.co/300x200/333/ff0000/" alt="image of..." />
+    </div>
+
+    <div>
+      <img src="https://placehold.co/360x160/333/ff0000/" alt="image of..." />
+    </div>
+
+    <div>
+      <img src="https://placehold.co/400x260/333/ff0000/" alt="image of..." />
+    </div>
+
+</div>
+</xmp>
+
                 </fw-accordion-body>
             </fw-accordion>
+
+
+ 
+       <fw-accordion>
+                <fw-accordion-title>
+                    <fw-icon name="minus" size="14" slot="expanded-icon"></fw-icon>
+                    <fw-icon name="plus" size="14" slot="collapsed-icon"></fw-icon>
+                    <fw-pill color=blue>
+                        <fw-icon name="add-contact" slot="icon"></fw-icon>
+                       Embed You Tube video
+                    </fw-pill>
+                </fw-accordion-title>
+                <fw-accordion-body>
+                  <p>Choose the page you want to add the video to, or create new page.</p>
+
+                  <p>Add the following tag and embed the video into the page.</p>
+
+                  <p>We will do this together in class.</p>
+
+<xmp>
+    <div class="yt">
+
+    </div>             
+</xmp>
+                </fw-accordion-body>
+            </fw-accordion>
+
+ 
 
             <!-- modal form -->
             <fw-accordion>
@@ -476,101 +576,80 @@
                     </fw-pill>
                 </fw-accordion-title>
                 <fw-accordion-body>
-                    <h4>Paste the following between the &lt;main&gt; tags.
+                    <h4>Paste the following between the &lt;main&gt; tags in a page of your choice.
                     </h4>
-                    <xmp>
-                        <style>
-                            ::backdrop {
-                                background-image: linear-gradient(45deg, snow, rebeccapurple, dodgerblue);
-                                opacity: 0.75;
-                            }
+<xmp>
+ 
+    <button class="show-dialog">Show the dialog</button>
+    <dialog class="dialog-one" style="position: fixed; top: 0">
+        <button>Close</button>
 
+        <p>Optional information here etc..:</p>
 
-                            form {
-                                display: grid;
-                                grid-template-columns: 1fr;
-                                gap: 4px;
+        <div>
+            <img src="https://placehold.co/300x160/333/ff0000/" alt="nice" />
+        </div>
 
-                                input {
-                                    padding: 0.5rem;
-                                }
+        <form class="dialog-form" action="https://reqres.in/api/users" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" required placeholder="full name:" />
+            <hr />
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="user_email" required placeholder="email:" />
+            <hr />
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="user_message" placeholder="optional message:"></textarea>
+            <hr />
 
-                                input:invalid {
-                                    border: 2px solid red;
-                                    background-color: beige;
-                                }
-                            }
-                        </style>
-                        <button class="show-dialog">Show the dialog</button>
-                        <dialog class="dialog-one" style="position: fixed; top: 0">
-                            <button>Close</button>
+            <button type="submit">Submit</button>
+        </form>
+    </dialog>
 
-                            <p>Some info here etc..:</p>
+    <script>
+        function openTheDialog(event) {
+            let dialogElement = document.querySelector('.dialog-one');
 
-                            <div>
-                                <img src="https://place-hold.it/300x160/333/ff0000/" alt="nice" />
-                            </div>
+            dialogElement.showModal();
+        }
 
-                            <form class="dialog-form" action="https://reqres.in/api/users" method="post">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="user_name" required placeholder="full name:" />
-                                <hr />
-                                <label for="mail">Email:</label>
-                                <input type="email" id="mail" name="user_email" required placeholder="email:" />
-                                <hr />
-                                <label for="msg">Message:</label>
-                                <textarea id="msg" name="user_message" placeholder="optional message:"></textarea>
-                                <hr />
+        function closeTheDialog(event) {
+            let dialogElement = document.querySelector('.dialog-one');
 
-                                <button role="submit">Submit</button>
-                            </form>
-                        </dialog>
+            dialogElement.close();
+        }
 
-                        <script>
-                            function openTheDialog(event) {
-                                let dialogElement = document.querySelector('.dialog-one');
+        let openButton = document.querySelector('.show-dialog');
 
-                                dialogElement.showModal();
-                            }
-
-                            function closeTheDialog(event) {
-                                let dialogElement = document.querySelector('.dialog-one');
-
-                                dialogElement.close();
-                            }
-
-                            let openButton = document.querySelector('.show-dialog');
-
-                            if (openButton) {
-                                openButton.addEventListener('click', openTheDialog);
-                            }
+        if (openButton) {
+            openButton.addEventListener('click', openTheDialog);
+        }
 
 
 
-                            let closeButton = document.querySelector('.dialog-one > button');
-                            if (closeButton) {
-                                closeButton.addEventListener('click', closeTheDialog);
-                            }
-                        </script>
+        let closeButton = document.querySelector('.dialog-one > button');
+        if (closeButton) {
+            closeButton.addEventListener('click', closeTheDialog);
+        }
+    </script>
 
-                        <script>
-                            let outputData = false;
-                            let formElement = document.querySelector('.dialog-form');
-                            if (formElement && outputData) {
-                                formElement.addEventListener('submit', (e) => {
-                                    // on form submission, prevent default
-                                    e.preventDefault();
-                                    let currentForm = e.target;
-                                    // // construct a FormData object from current form,
-                                    const formData = new FormData(currentForm);
-                                    for (var pair of formData.entries()) {
-                                        console.log(pair[0], pair[1]);
-                                    }
-                                });
-                            }
-                        </script>
+    <script>
+        let outputData = false;
+        let formElement = document.querySelector('.dialog-form');
+        if (formElement && outputData) {
+            formElement.addEventListener('submit', (e) => {
+                // on form submission, prevent default
+                e.preventDefault();
+                let currentForm = e.target;
+                // // construct a FormData object from current form,
+                const formData = new FormData(currentForm);
+                for (var pair of formData.entries()) {
+                    console.log(pair[0], pair[1]);
+                }
+            });
+        }
+    </script>
                     </xmp>
-                    <fw-toggle size="medium"></fw-toggle>
+
                 </fw-accordion-body>
             </fw-accordion>
             <!-- end of modal -->
@@ -603,17 +682,103 @@
                                     Build</a></p>
                         </li>
                         <li>
-                            <p>And here is how to add it to our site pages: <a
-                                    href="https://bigunit.co.nz/StMarys_2025/slideshow-how.html">Flickity
-                                    Build Guide</a></p>
+                            <p>And here is how to add it to our site</p>
+                            <p>Create a slideshow.html and add the following</p>
                         </li>
                     </ol>
+<xmp>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="shared.css" />
+<link rel="stylesheet" href="navigation.css" />
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<title>SlideShow</title>
+</head>
+<body>
+<div class="container">
+    <!-- header start-->
+    <header>
+    <nav>
+        <ul class="primary-menu">
+        <li>
+            <div>Logo Here</div>
+        </li>
+        <li>
+            <a class="nav-button" href="index.html"><span>Home</span></a>
+        </li>
+        <li>
+            <a class="nav-button" href="./contact.html"><span>Contact</span></a>
+        </li>
+        <li>
+            <a class="nav-button" href="./blog.html"><span>Blog</span></a>
+        </li>
+        <li>
+            <a class="nav-button" href="./about.html"><span>About</span></a>
+        </li>
+        <li>
+            <a class="nav-button" href="./team.html"><span>Meet the Team</span></a>
+        </li>
+        </ul>
+    </nav>
+    </header>
+
+    <!-- main content start -->
+    <main class="content">
+    <div class="main-carousel">
+        <img src="https://placehold.co/800x600" alt="" />
+        <img src="https://placehold.co/1200x800" alt="" />
+        <img src="https://placehold.co/800x600" alt="" />
+        <img src="https://placehold.co/800x600" alt="" />
+        <img src="https://placehold.co/800x600" alt="" />
+    </div>
+    <div class="slideshow-text">
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor reprehenderit dolorem nulla esse laborum
+        delectus. Dolor dolores neque, corporis quas accusantium minus tenetur facilis veniam sequi illum vero
+        doloribus eaque.
+        </p>
+    </div>
+
+    <script>
+        var elem = document.querySelector('.main-carousel');
+        var myFlickity = new Flickity(elem, {
+        // options
+        draggable: true,
+        freeScroll: true,
+        contain: true,
+        autoPlay: true,
+        pauseAutoPlayOnHover: true,
+        autoPlay: 4500,
+        fade: true,
+        });
+    </script>
+    </main>
+
+    <!-- footer start -->
+    <footer>
+    <div>
+        <p>your footer details here.</p>
+    </div>
+    <div>
+        <p class="copyright">&copy; 2026</p>
+    </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+</xmp>
 
 
 
 
 
-                    <fw-toggle size="medium"></fw-toggle>
+
                 </fw-accordion-body>
             </fw-accordion>
 
@@ -621,125 +786,7 @@
             <!-- end slideshow -->
 
 
-            <!-- start drop down menu -->
-            <fw-accordion>
-                <fw-accordion-title>
-                    <fw-icon name="minus" size="14" slot="expanded-icon"></fw-icon>
-                    <fw-icon name="plus" size="14" slot="collapsed-icon"></fw-icon>
-                    <fw-pill color=blue>
-                        <fw-icon name="add-note" slot="icon"></fw-icon>
-                        Two Level Menu:
-                    </fw-pill>
-                </fw-accordion-title>
-                <fw-accordion-body>
-                    <h4>Here's the whole page for a drop down.
-                    </h4>
-                    <xmp>
-                        <!-- The navigation styles -->
-
-                        <style>
-                            .nav-button {
-                                font-family: monospace;
-                                font-size: 1.2rem;
-                                display: block;
-                                color: snow;
-                                background-color: rosybrown;
-                                text-decoration: none;
-                                padding: 0.5rem 16px;
-                                cursor: pointer;
-                                transition: background-color, color;
-                                transition-duration: 500ms;
-                            }
-
-                            .nav-button:hover {
-                                background-color: yellow;
-                                color: black;
-                            }
-
-                            .sub-menu .nav-button {
-                                /* things look better when all the same width */
-                                /* but target only sub-menu buttons */
-                                min-width: 60px;
-                            }
-
-                            header {
-                                nav {
-                                    ul {
-                                        display: flex;
-                                        justify-content: flex-end;
-                                        align-items: center;
-                                        gap: 1rem;
-                                        list-style-type: none;
-
-                                        li:last-of-type {
-                                            padding-right: 1rem;
-                                        }
-                                    }
-                                }
-                            }
-
-                            .sub-menu {
-                                /* background-color: red; */
-                                display: flex;
-                                align-items: flex-start;
-                                flex-direction: column;
-                                position: absolute;
-
-                                gap: 0.25rem;
-                                padding: 0.5rem 0;
-
-                                display: none;
-                            }
-
-                            .sub-menu-wrapper:hover .sub-menu {
-                                display: flex;
-                            }
-                        </style>
-
-
-                        <!-- Here's the navigation with sub menu -->
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a class="nav-button" href="#"><span>Home</span></a>
-                                </li>
-                                <li>
-                                    <a class="nav-button" href="#"><span>Contact</span></a>
-                                </li>
-                                <li class="sub-menu-wrapper" style="position: relative" aria-haspopup="true">
-                                    <a class="nav-button" href="#"><span>Blog ></span></a>
-                                    <!-- sub menu start -->
-                                    <ul class="sub-menu" aria-label="submenu">
-                                        <li>
-                                            <a class="nav-button"
-                                                href="https://www.newscientist.com/"><span>Science</span></a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-button"
-                                                href="https://podcasts.apple.com/gb/podcast/the-rest-is-history/"><span>History</span></a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-button"
-                                                href="https://www.sparknotes.com/lit/"><span>English</span></a>
-                                        </li>
-                                    </ul>
-                                    <!-- sub menu end -->
-                                </li>
-                                <li>
-                                    <a class="nav-button" href="#"><span>About</span></a>
-                                </li>
-                                <li>
-                                    <a class="nav-button" href="#"><span>Meet the Team</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-
-
-                    </xmp>
-                    <fw-toggle size="medium"></fw-toggle>
-                </fw-accordion-body>
-            </fw-accordion>
-            <!-- end drop down menu -->
+          
 
         </div>
     </div>
