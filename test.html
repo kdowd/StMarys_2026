@@ -37,65 +37,32 @@
 
       <!-- main content start -->
       <main class="content">
-        <button class="show-dialog">Show the dialog</button>
-        <dialog class="dialog-one">
-          <button>Close</button>
+        <form class="signup-form">
+          <h3>Details:</h3>
 
-          <p>Some info here etc..:</p>
-
-          <div>
-            <img src="https://placehold.co/300x160/333/ff0000/" alt="nice" />
-          </div>
-
-          <form class="dialog-form" action="https://reqres.in/api/users" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name" required placeholder="full name:" />
-            <hr />
-            <label for="mail">Email:</label>
-            <input type="email" id="mail" name="user_email" required placeholder="email:" />
-            <hr />
-            <label for="msg">Message:</label>
-            <textarea id="msg" name="user_message" placeholder="optional message:"></textarea>
-            <hr />
-
+          <label for="name">Name:</label>
+          <input type="text" autocomplete="on" id="name" name="user_name" required placeholder="full name:" />
+          <hr />
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email" required placeholder="email:" />
+          <hr />
+          <label for="msg">Message:</label>
+          <textarea id="msg" name="user_message" placeholder="optional message:"></textarea>
+          <hr />
+          <div class="button-wrap">
+            <button type="reset">Reset</button>
             <button type="submit">Submit</button>
-          </form>
-        </dialog>
+          </div>
+        </form>
 
         <script>
-          function openTheDialog(event) {
-            let dialogElement = document.querySelector('.dialog-one');
-
-            dialogElement.showModal();
-          }
-
-          function closeTheDialog(event) {
-            let dialogElement = document.querySelector('.dialog-one');
-
-            dialogElement.close();
-          }
-
-          let openButton = document.querySelector('.show-dialog');
-
-          if (openButton) {
-            openButton.addEventListener('click', openTheDialog);
-          }
-
-          let closeButton = document.querySelector('.dialog-one > button');
-          if (closeButton) {
-            closeButton.addEventListener('click', closeTheDialog);
-          }
-        </script>
-
-        <script>
-          let outputData = false;
-          let formElement = document.querySelector('.dialog-form');
+          let outputData = true;
+          let formElement = document.querySelector('.signup-form');
           if (formElement && outputData) {
             formElement.addEventListener('submit', (e) => {
-              // on form submission, prevent default
               e.preventDefault();
               let currentForm = e.target;
-              // // construct a FormData object from current form,
+
               const formData = new FormData(currentForm);
               for (var pair of formData.entries()) {
                 console.log(pair[0], pair[1]);
@@ -103,22 +70,6 @@
             });
           }
         </script>
-        <style>
-          iframe {
-            aspect-ratio: 16 / 9;
-            width: 100% !important;
-          }
-        </style>
-        <div class="yt">
-          <iframe
-            src="https://www.youtube.com/embed/kiUGf_Z08RQ"
-            title="C++ POINTERS FULL COURSE Beginner to Advanced (Learn C++ Pointers in 2,5 hours)"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
       </main>
 
       <!-- footer start -->
